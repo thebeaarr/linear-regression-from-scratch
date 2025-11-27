@@ -33,25 +33,25 @@ def gradient_descent(m_now, b_now, points, L):
 m = 0
 b = 0
 L = 0.01
-epochs = 10000000
+epochs = 1000
 
 eq = 0
-old_loss = 0
-
+# old_loss = 0
+# 
 for i in range(epochs):
 	m, b = gradient_descent(m, b, data, L)
 	current_loss = loss_function(m, b, data)
 
-	if abs(old_loss - current_loss) < 1e-8:
-		eq += 1
-	else:
-		eq = 0
+	# if abs(old_loss - current_loss) < 1e-8:
+	# 	eq += 1
+	# else:
+	# 	eq = 0
 
-	if eq == 3:
-		print(f"Converged after {i} epochs")
-		break
+	# if eq == 3:
+	# 	print(f"Converged after {i} epochs")
+	# 	break
 
-	old_loss = current_loss
+	# old_loss = current_loss
 
 	if i % 100 == 0:
 		print(f"Epoch {i}: Loss = {current_loss}")
