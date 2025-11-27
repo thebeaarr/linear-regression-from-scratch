@@ -1,14 +1,29 @@
 # Linear Regression from Scratch
 
-This is a simple Python project that implements **linear regression** using **gradient descent**. It predicts a student’s score based on study time.
+This project implements **linear regression from scratch in Python** using **gradient descent**, without relying on machine learning libraries. The goal is to predict a student’s **score** based on their **study time**.
 
-## Features
+## 📌 Features
 
-- Calculates the best-fitting line (slope `m` and intercept `b`)  
-- Shows the Mean Squared Error (MSE)  
-- Visualizes data points and the regression line
+- Computes the best-fitting line by learning:
+  - the **slope (m)**
+  - the **intercept (b)**
+- Uses **Mean Squared Error (MSE)** as the loss function
+- Visualizes:
+  - the original data points
+  - the learned regression line
 
-## Notes
+## 📊 Result
 
-- Data cleaning is not included; ensure the CSV has no missing or non-numeric values.  
-- Learning rate and epochs may need adjustment depending on your dataset.
+The plot below shows:
+- **Black points**: real data (study time vs score)  
+- **Red line**: the regression line learned using gradient descent  
+
+<p align="center">
+  <img src="results.png" width="600">
+</p>
+
+## 📝 Notes
+
+- No data cleaning is performed. The CSV file must contain **only numeric values** and **no missing data**.
+- The **learning rate** and **number of epochs** may need to be adjusted depending on your dataset.
+- The model is trained using **pure Python** (no NumPy, no scikit-learn).
