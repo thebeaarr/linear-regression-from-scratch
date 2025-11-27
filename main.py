@@ -17,8 +17,6 @@ def loss_function(m, b, points):
 	return total_err / float(len(points))
 
 
-
-
 # Gradient descent
 def gradient_descent(m_now, b_now, points, L):
 	m_gradient = 0
@@ -34,14 +32,11 @@ def gradient_descent(m_now, b_now, points, L):
 	return m_now, b_now
 
 
-
 # Initial values
 m = 0
 b = 0
 L = 0.01
 epochs = 1000
-
-
 
 eq = 0
 
@@ -57,6 +52,7 @@ for i in range(epochs):
 		plt.ylabel("Score")
 		plt.show()
 		print(f"Epoch {i}: Loss = {current_loss}")
+
 
 print(f"Final: m = {m}, b = {b}")
 
